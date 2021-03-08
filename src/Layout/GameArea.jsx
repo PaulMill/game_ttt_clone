@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { GameWrapper, GameControlsWrapper } from './';
-import { WINNING_PLAYER } from '../utils'
+import { WINNING_PLAYER } from '../utils';
+import useLocalStarage from '../hooks/useLocalStorage';
 
 export const GameArea = () => {
-    const [score, setScore] = useState(WINNING_PLAYER);
+    const [score, setScore] = useLocalStarage(WINNING_PLAYER, 'score');
     const [roundEnds, setRoundEnds] = useState(false);
     const [resetGrid, setResetGrid] = useState(false);
 
