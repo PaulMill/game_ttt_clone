@@ -1,8 +1,12 @@
+/* color for X #b5d0ff
+color for O #ffe38c */
+
+
 .app {
   text-align: center;
   background-color: #282c34;
-  height: 100vh;
-  width: 100vw;
+  /* height: 100vh;
+  width: 100vw; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,6 +18,47 @@
   font-weight: 600;
 }
 
+.game-history_container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+}
+
+.history-area {
+  border: 1px solid #7ed200;
+  min-width: 35%;
+  max-height: 75%;
+}
+.history-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.history-item {
+  flex: 1 0 20%;
+  list-style: none;
+  margin: 1rem;
+  font-size: 1.2rem;
+  border: 1px solid rgb(182, 182, 182);
+  border-radius: 7px;
+  min-height: 100px;
+  min-width: 100px;
+}
+
+.history-item-text_title {
+  font-weight: 400;
+}
+
+.history-item-text_won {
+  font-weight: 600;
+}
+.history-item-details {
+  font-size: 1rem;
+  text-align: left;
+  padding-left: 2rem;
+}
+
 .game-area {
   min-width: 50%;
   height: 75%;
@@ -21,6 +66,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  border: 1px solid palevioletred;
 }
 .game-wrapper {
   height: 75%;
@@ -68,6 +114,12 @@
 .player {
   margin-bottom: 0px;
   font-size: 0.8em;
+}
+.playerO-title {
+ color: #ffe38c;
+}
+.playerX-title {
+  color: #b5d0ff;
 }
 .player-won {
   color: #7ed200;

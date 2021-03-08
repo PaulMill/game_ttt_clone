@@ -16,9 +16,9 @@ export const GameControlsWrapper = ({ score, setScore, setNewRound, roundEnds })
     return (
         <div className="game-controls">
             <Button text={'RESET RESULTS'} clicked={resetClicked} isActive={roundEnds} color={'#9500ffb6'}/>
-            <PlayerResult textPlayer={'PLAYER (X)'} score={score.X.score} isWon={score.X.isWon} />
-            <PlayerResult textPlayer={'TIES'} score={score.T.score} isWon={score.T.isWon} />
-            <PlayerResult textPlayer={'PLAYER (O)'} score={score.O.score} isWon={score.O.isWon} />
+            <PlayerResult textPlayer={'PLAYER (X)'} score={score.X.score} isWon={score.X.isWon} player="X"/>
+            <PlayerResult textPlayer={'TIES'} score={score.T.score} isWon={score.T.isWon} player="T" />
+            <PlayerResult textPlayer={'PLAYER (O)'} score={score.O.score} isWon={score.O.isWon} player="O" />
             <Button text={'NEW ROUND'} clicked={() => setNewRound(true)} isActive={roundEnds} color={'#7ed200c2'}/>
         </div>
     )
