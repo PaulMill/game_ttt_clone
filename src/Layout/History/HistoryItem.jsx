@@ -7,7 +7,7 @@ export const HistoryItem = ({ titleText, detailsData, roundResult }) => {
 
     const details = showDetails 
         && detailsData 
-        && (<div>{detailsData.map(el => (<p key={el.step}>{el.step}: {el.sign}<span>-&gt;</span> <span>({el.coordinates})</span></p>))}</div>);
+        && (<div>{detailsData.map(el => (<p key={el.step}>{el.step}: {el.sign}<span>-&gt;</span> <span>({el.coord})</span></p>))}</div>);
     
     let footerClassName = "history-item-text_won ";
     let footerText = "TIE";
