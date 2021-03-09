@@ -19,7 +19,7 @@ color for O -> #ffe38c */
 .app-header_container {
   width: 50%;
   display: flex;
-justify-content: space-between;
+  justify-content: space-between;
 }
 .app-header_button {
   align-self: center;
@@ -33,24 +33,29 @@ justify-content: space-between;
 }
 
 .history-area {
-  border: 1px solid #7ed200;
   min-width: 35%;
   max-height: 75%;
+}
+.history-header_text {
+  margin-bottom: 0;
 }
 .history-list {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
 }
-.history-item {
-  flex: 1 0 20%;
-  list-style: none;
+.card {
+  flex: 1 0 30%;
   margin: 1rem;
   font-size: 1.2rem;
   border: 1px solid rgb(182, 182, 182);
   border-radius: 7px;
   min-height: 100px;
-  min-width: 100px;
+  min-width: 150px;
+  cursor: pointer;
+}
+.history-item {
+  list-style: none;
 }
 
 .history-item-text_title {
@@ -73,7 +78,6 @@ justify-content: space-between;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  border: 1px solid palevioletred;
 }
 .game-wrapper {
   height: 75%;
