@@ -17,6 +17,6 @@ export const Button = ({text, clicked, isActive, color}) => {
 Button.propTypes = {
     text: PropTypes.string.isRequired,
     clicked: PropTypes.func,
-    isActive: PropTypes.bool.isRequired,
+    isActive: PropTypes.bool,
     color: PropTypes.string
 }

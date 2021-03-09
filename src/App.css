@@ -1,6 +1,5 @@
-/* color for X #b5d0ff
-color for O #ffe38c */
-
+/* color for X -> #b5d0ff
+color for O -> #ffe38c */
 
 .app {
   text-align: center;
@@ -16,6 +15,14 @@ color for O #ffe38c */
 }
 .app-header_text {
   font-weight: 600;
+}
+.app-header_container {
+  width: 50%;
+  display: flex;
+justify-content: space-between;
+}
+.app-header_button {
+  align-self: center;
 }
 
 .game-history_container {

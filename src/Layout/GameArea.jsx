@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import { GameWrapper, GameControlsWrapper } from './';
 import { WINNING_PLAYER } from '../utils';
 import useLocalStarage from '../hooks/useLocalStorage';
 
-export const GameArea = () => {
+export const GameArea = ({ showHistory }) => {
     const [score, setScore] = useLocalStarage(WINNING_PLAYER, 'score');
     const [roundEnds, setRoundEnds] = useState(false);
     const [resetGrid, setResetGrid] = useState(false);
-    const [showGameHistory, setShowGameHistory] = useState(true);
 
     return (
         <div className="game-history_container">
@@ -15,7 +15,7 @@ export const GameArea = () => {
                 <GameWrapper score={score} setScore={setScore} resetGrid={resetGrid} setResetGrid={setResetGrid} setRoundEnds={setRoundEnds} />
                 <GameControlsWrapper score={score} setScore={setScore} setNewRound={() => setResetGrid(true)} roundEnds={roundEnds} />
             </section>
-            {showGameHistory && <section className="history-area">
+            {showHistory && <section className="history-area">
                 <h4 className="history-header_text">Game History</h4>
                 <ul className="history-list">
                     <li className="history-item">
@@ -52,4 +52,8 @@ export const GameArea = () => {
             }
         </div>
     )
+}
+
+GameArea.propTypes = {
+    showHistory: PropTypes.bool.isRequired
 }
