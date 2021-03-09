@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { HistoryItem } from './';
 
-export const HistoryArea = ({ historyData = [] }) => {
+export const HistoryArea = ({ historyData }) => {
     return (
         <section className="history-area">
             <h4 className="history-header_text">Game History</h4>

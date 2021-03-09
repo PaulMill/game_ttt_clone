@@ -2,13 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Button, PlayerResult } from '../UI_Components';
 
-export const GameControlsWrapper = ({ score, setScore, setNewRound, roundEnds }) => {
+export const GameControlsWrapper = ({ score, setScore, setNewRound, roundEnds, resetHistory }) => {
 
     const resetClicked = () => {
         const newScore = {...score};
         for(const key in newScore) {
             newScore[key] = {score: 0, isWon: false};
         }
+        resetHistory();
         setScore(newScore);
         setNewRound(true);
     }
@@ -49,5 +50,6 @@ GameControlsWrapper.propTypes = {
     ).isRequired,
     setScore: PropTypes.func,
     setNewRound: PropTypes.func,
-    roundEnds: PropTypes.bool.isRequired
+    roundEnds: PropTypes.bool.isRequired,
+    resetHistory: PropTypes.func
 }

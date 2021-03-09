@@ -65,3 +65,5 @@ export const resetWonScore = (current) => {
     }
     return newScoreObj;
 }
+
+export const updateMoves = (moves, sign, step, coords) => ([...moves, {sign, step, coords}])
